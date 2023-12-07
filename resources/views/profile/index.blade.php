@@ -24,12 +24,12 @@
                       <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">  
                         <img src="{{ $profile['image'] }}" alt="Profile" class="rounded-circle">
                         <h2>{{ $profile['name'] }}</h2>
-                        <h5>{{ $profile['no_peserta'] }}</h5>
+                        <h5>No Peserta {{ $profile['no_peserta'] }}</h5>
                         <div class="row d-flex justify-content-center">
-                          <div class="col-2">Hobi</div>
-                          <div class="col-10">{{ $profile['hobi'] }}</div> 
-                          <div class="col-2">Alamat</div>
-                          <div class="col-10">{{ $profile['alamat'] }}</div>
+                          <div class="col-4">Hobi</div>
+                          <div class="col-8">{{ $profile['hobi'] }}</div> 
+                          <div class="col-4">Alamat</div>
+                          <div class="col-8">{{ $profile['alamat'] }}</div>
                           <div class="col-10">
                             <a href="{{ $profile['repository'] }}" class="btn btn-success" target="_blank"><i class="bi bi-github"></i> View the repository</a> 
                           </div>
