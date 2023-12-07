@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+ * ROUTE UNTUK PROFILE
+ */
+
+Route::controller(ProfileController::class)->prefix('profile')->group(function(){
+    Route::get('/', 'index')->name('profile.index');
+});
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
