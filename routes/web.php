@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InformationController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +22,11 @@ use Illuminate\Support\Facades\Route;
 Route::controller(ProfileController::class)->prefix('profile')->group(function(){
     Route::get('/', 'index')->name('profile.index');
 });
-
-Route::get('/', function () {
-    return view('index');
+Route::controller(InformationController::class)->prefix('/')->group(function(){
+    Route::get('/', 'index')->name('profile.index');
+    Route::get('/information/show/{id?}', 'show')->name('information.modal');
+    Route::post('/information/show/{id?}', 'store')->name('information.post');
+    Route::delete('/information/delete/{id?}', 'destroy')->name('information.delete');
 });
+
+ 

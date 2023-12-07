@@ -30,7 +30,9 @@
                           <div class="col-10">{{ $profile['hobi'] }}</div> 
                           <div class="col-2">Alamat</div>
                           <div class="col-10">{{ $profile['alamat'] }}</div>
-                          <div class="col-10"><a href="{{ $profile['repository'] }}" class="btn btn-success" target="_blank"><i class="bi bi-github"></i> View the repository</a></div>
+                          <div class="col-10">
+                            <a href="{{ $profile['repository'] }}" class="btn btn-success" target="_blank"><i class="bi bi-github"></i> View the repository</a> 
+                          </div>
                         </div>
                       </div>
                     </div>
